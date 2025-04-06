@@ -41,7 +41,7 @@ The main objective of this challenge is to build a recipe page that features a c
 ## Links
 
 - Solution URL: (https://github.com/FrontEndExplorer-Temp/recipe-page)
-- Live Site URL: Will update once the site is live
+- Live Site URL: (https://frontendexplorer-temp.github.io/recipe-page/)
 
 ## My process
 
