@@ -1,0 +1,367 @@
+:root {
+  --rose-800: rgb(122, 40, 78);
+  --rose-50: rgb(255, 247, 251);
+  --stone-900: rgb(49, 46, 44);
+  --stone-600: rgb(95, 86, 77);
+  --stone-150: rgb(227, 221, 215);
+  --stone-100: rgb(243, 229, 215);
+  --brown-800: rgb(133, 70, 50);
+  --white: rgb(255, 255, 255);
+
+  --spacing-128: 12.8rem; /* 128px */
+  --spacing-48: 4.8rem; /* 48px */
+  --spacing-40: 4rem; /* 40px */
+  --spacing-32: 3.2rem; /* 32px */
+  --spacing-24: 2.4rem; /* 24px */
+  --spacing-16: 1.6rem; /* 16px */
+  --spacing-12: 1.2rem; /* 12px */
+  --spacing-8: 0.8rem; /* 8px */
+}
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+      9. Create a root stacking context
+    */
+#root,
+#-next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 62.5%; /* 1REM =10px */
+}
+
+@font-face {
+  font-family: "Young Serif Regular";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit Regular";
+  src: url("./assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit Bold";
+  src: url("./assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit SemiBold";
+  src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf")
+    format("truetype");
+}
+
+body {
+  margin: 0px;
+  background-color: var(--stone-100);
+  padding: var(--spacing-128) var(--spacing-48);
+  min-height: 100vh;
+}
+
+hr {
+  height: 1px;
+  color: var(--stone-150);
+  background: var(--stone-150);
+  font-size: 0;
+  border: 0;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 73.6rem;
+  width: 73.6rem;
+  margin: 0 auto;
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding: var(--spacing-40);
+  border-radius: 2.4rem;
+}
+
+.recipe-card-title {
+  margin: var(--spacing-40) 0 var(--spacing-24) 0;
+  font-family: "Young Serif Regular", serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.recipe-card-image img {
+  width: 100%;
+  display: block;
+  border-radius: 1.2rem;
+}
+
+.recipe-card-description {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 1.6rem;
+  color: var(--stone-600);
+}
+
+.recipe-card-prep-time {
+  margin: var(--spacing-32) 0;
+  background-color: var(--rose-50);
+  padding: var(--spacing-24);
+  border-radius: 1.2rem;
+}
+
+.recipe-card-prep-time-title {
+  font-family: "Outfit SemiBold";
+  color: var(--rose-800);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-16);
+}
+
+.recipe-card-prep-time-list {
+  font-family: "Outfit Regular";
+  font-size: 1.6rem;
+  line-height: var(--spacing-24);
+  color: var(--stone-600);
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.recipe-card-prep-time-list li {
+  margin-block-end: var(--spacing-8);
+}
+
+.recipe-card-prep-time-list li:last-child {
+  margin-block-end: 0px;
+}
+
+.recipe-card-prep-time-list li::marker {
+  color: var(--rose-800);
+  content: "•         ";
+  font-size: 1.6rem;
+}
+
+.recipe-card-ingredients-title {
+  color: var(--brown-800);
+  font-family: "Young Serif Regular";
+  font-size: 2.8rem;
+  margin-bottom: var(--spacing-24);
+}
+
+.recipe-card-ingredients-list {
+  color: var(--stone-600);
+  font-size: 1.6rem;
+  font-family: "Outfit Regular";
+  line-height: 2.4;
+  margin-bottom: var(--spacing-32);
+  list-style-type: disc;
+}
+
+.recipe-card-ingredients-list li::marker {
+  color: var(--brown-800);
+  content: "•        ";
+  font-size: 1.6rem;
+}
+
+.recipe-card-instructions-title {
+  font-family: "Young Serif Regular";
+  color: var(--brown-800);
+  font-size: 2.8rem;
+  margin-block: var(--spacing-32) var(--spacing-24);
+}
+
+.recipe-card-instructions-list {
+  font-family: "Outfit Regular";
+  font-size: 1.6rem;
+  color: var(--stone-600);
+}
+
+.recipe-card-instructions-list li {
+  margin-block-end: var(--spacing-8);
+}
+
+.recipe-card-instructions-list li:last-child {
+  margin-block-end: var(--spacing-32);
+}
+
+.recipe-card-instructions-list li:nth-child(1)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "1.      ";
+}
+
+.recipe-card-instructions-list li:nth-child(2)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "2.      ";
+}
+
+.recipe-card-instructions-list li:nth-child(3)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "3.      ";
+}
+
+.recipe-card-instructions-list li:nth-child(4)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "4.      ";
+}
+
+.recipe-card-instructions-list li:nth-child(5)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "5.      ";
+}
+
+.recipe-card-instructions-list li:nth-child(6)::marker {
+  color: var(--brown-800);
+  font-size: 1.6rem;
+  font-family: "Outfit Bold";
+  content: "6.      ";
+}
+
+.recipe-card-nutrition-info {
+  margin-top: var(--spacing-32);
+}
+
+.recipe-card-nutrition-title {
+  font-family: "Young Serif Regular";
+  color: var(--brown-800);
+  font-size: 2.8rem;
+}
+
+.recipe-card-nutrition-description {
+  font-family: "Outfit Regular";
+  font-size: 1.6rem;
+  color: var(--stone-600);
+  margin-block: var(--spacing-24);
+}
+
+.recipe-card-nutrition-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recipe-card-nutrition-table tbody tr {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.recipe-card-nutrition-label {
+  font-family: "Outfit Regular";
+  font-size: 1.6rem;
+  padding: var(--spacing-12) var(--spacing-16);
+}
+
+.recipe-card-nutrition-table tbody tr:last-child {
+  border-bottom: 0px solid var(--stone-150);
+}
+
+.recipe-card-nutrition-value {
+  font-family: "Outfit Bold";
+  font-size: 1.6rem;
+  color: var(--brown-800);
+}
+
+@media (max-width: 768px) {
+  .recipe-card {
+    width: 61.6rem;
+  }
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 640px) {
+  body {
+    padding: 0px;
+  }
+
+  .recipe-card {
+    width: 100%;
+    padding: 0;
+  }
+
+  .recipe-card-image img {
+    width: 100%;
+    display: block;
+    border-radius: 0; /* Elimina el borde redondeado de la imagen */
+  }
+
+  .recipe-card-details {
+    padding: var(--spacing-40) var(--spacing-32) var(--spacing-32)
+      var(--spacing-40);
+  }
+
+  h1 {
+    margin: 0 0 var(--spacing-24) 0;
+    font-family: "Young Serif Regular", serif;
+    font-size: 3.6rem;
+    line-height: 1;
+  }
+
+  .recipe-card-nutrition-label {
+    font-family: "Outfit Regular";
+    font-size: 1.6rem;
+    padding: var(--spacing-12) var(--spacing-32);
+  }
+}
